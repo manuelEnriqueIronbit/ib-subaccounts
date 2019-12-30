@@ -12,6 +12,16 @@
 <body>
     
         <ib-subaccount-table></ib-subaccount-table>
+    <script>
+        const subaccount = document.querySelector('ib-subaccount-table');
+        subaccount.addEventListener('register-subaccount', event => {
+            subaccount.subaccountList = [...subaccount.subaccountList, event.detail];
+        })
 
+        subaccount.addEventListener('edit-subaccount', event => {
+            subaccount.editObject.name =  event.detail.newData.name
+            subaccount.editObject.estatus =  event.detail.newData.estatus
+        })
+    </script>
 </body>
 </html>

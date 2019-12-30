@@ -1,3 +1,12 @@
+$color-white: #ffffff;
+$color-green: #00EFD1;
+$color-gradient180: linear-gradient(180deg, #00EFD1 0%, #00ACEA 100%);
+$color-gradient43: linear-gradient(43.3deg, #00EFD1 0%, #00ACEA 100%);
+$color-cream: #DFDFDF;
+$color-blue: #00ACEA;
+$color-black:#000000;
+$box-shadow: 0 21px 62px 0 rgba(0, 0, 0, 0.1);
+
 :host {
   display: inline-block;
   box-sizing: border-box;
@@ -19,11 +28,11 @@
 
 table{
   border-spacing:0;
-  width: 508px;
+  width: 100%;
   thead{
-    background-image: linear-gradient(180deg, #00EFD1 0%, #00ACEA 100%);
+    background-image: $color-gradient180;
     padding: 0;
-    color: #ffffff;
+    color: $color-white;
     th{
       padding: 8px 17px;
     }
@@ -33,7 +42,7 @@ table{
       padding: 8px 0 8px 17px;
     }
     th:nth-child(2){
-      width: 145x;
+      width: 145px;
 
     }
     th:nth-child(3){
@@ -44,7 +53,7 @@ table{
     }
   }
   tr:nth-child(even){
-    background-color: #DFDFDF;
+    background-color: $color-cream;
   }
   tbody{
     tr{
@@ -62,12 +71,12 @@ table{
   }
 }
 button{
-  background-image: linear-gradient(44.3deg, #00BFEF 0%, #00DFD1 100%);
-  border: 1.68px solid #00BFEF;
+  background-image: $color-gradient180;
+  border: 1.68px solid $color-blue;
   border-radius: 11.76px;
   width: 102px;
   height: 25.2px;
-  color: #FFFFFF;
+  color: $color-white;
   //font-family: SFUIDisplay;
   font-size: 16.24px;
   font-weight: 700;
@@ -87,12 +96,12 @@ button{
 paper-dialog {
 
   vaadin-button {
-    background-image: linear-gradient(44.3deg, #00BFEF 0%, #00DFD1 100%);
-    border: 1.68px solid #00BFEF;
+    background-image: $color-gradient43;
+    border: 1.68px solid $color-blue;
     border-radius: 11.76px;
     width: 102px;
     height: 25.2px;
-    color: #FFFFFF;
+    color: $color-white;
     //font-family: SFUIDisplay;
     font-size: 16px;
     font-weight: 700;
@@ -109,16 +118,16 @@ paper-dialog {
     margin-right: auto;
   }
 
-  background-color: #FFFFFF;
+  background-color: color-white;
   border-radius: 23.76px;
-  box-shadow: 0 21px 62px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: $box-shadow;
   width: 80vh;
   height: 245px;
   max-width: none;
 
   h2 {
     margin-top: 22px;
-    color: #000000;
+    color: $color-black;
     //font-family: TypoGrotesk;
     font-size: 16px;
     font-weight: 400;
@@ -129,7 +138,8 @@ paper-dialog {
   }
 
   div {
-    ib-subaccount-edit, ib-subaccount-register { width: 100%;
+    ib-subaccount-edit, ib-subaccount-register { 
+      width: 100%;
 
       div {
         padding: 0 30px 15px;
@@ -140,8 +150,8 @@ paper-dialog {
 
         input, select {
           display: inline;
-          background-color: #EFEFEF;
-          border: 0.65px solid #EEEEEE;
+          background-color: $color-cream;
+          border: 0.65px solid $color-cream;
           border-radius: 3px;
           height: 25px;
           width: 278px;

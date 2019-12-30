@@ -55,8 +55,8 @@ class IbSubaccountTable extends LitElement {
                           <tr >
                               <td>${entry.noSubcuenta}</td>
                               <td>${entry.name}</td>
-                              <td>${entry.estatus === 'true'? html`<iron-icon icon="vaadin:check-circle-o"></iron-icon>` : html`<iron-icon icon="vaadin:close-circle-o"></iron-icon>`}</td>
-                              <td><a id=${entry.id} @click="${this.openDialogEdit}"><iron-icon icon="vaadin:vaadin:edit"></iron-icon></a></td>
+                              <td>${entry.estatus === 'true'? html`<iron-icon src="/assets/activo.png"></iron-icon>` : html`<iron-icon icon="vaadin:close-circle-o"></iron-icon>`}</td>
+                              <td><a id=${entry.id} @click="${this.openDialogEdit}"><iron-icon src="/assets/editar.png"></iron-icon></a></td>
 
                           </tr>`
                       )}
@@ -68,12 +68,19 @@ class IbSubaccountTable extends LitElement {
   }
 
     insertTable(event){
-    this.subaccountList = [...this.subaccountList,event.detail]
+      this.dispatchEvent(new CustomEvent('register-subaccount', {
+        detail: event.detail
+      }))
+
   }
 
   editSubaccount(event){
-    this.editObject.name = event.detail.name;
-    this.editObject.estatus = event.detail.estatus;
+    this.dispatchEvent(new CustomEvent('edit-subaccount',{
+      detail: {
+        editedObject: this.editObject,
+        newData: event.detail
+      }
+    }))
     this.requestUpdate();
   }
 

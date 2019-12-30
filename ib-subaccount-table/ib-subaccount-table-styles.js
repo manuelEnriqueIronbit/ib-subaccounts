@@ -19,7 +19,7 @@ export default css`
 
 table {
   border-spacing: 0;
-  width: 508px; }
+  width: 100%; }
   table thead {
     background-image: linear-gradient(180deg, #00EFD1 0%, #00ACEA 100%);
     padding: 0;
@@ -31,7 +31,7 @@ table {
       text-align: left;
       padding: 8px 0 8px 17px; }
     table thead th:nth-child(2) {
-      width: 145x; }
+      width: 145px; }
     table thead th:nth-child(3) {
       width: 119px; }
     table thead th:nth-child(4) {
@@ -47,12 +47,12 @@ table {
       cursor: pointer; }
 
 button {
-  background-image: linear-gradient(44.3deg, #00BFEF 0%, #00DFD1 100%);
-  border: 1.68px solid #00BFEF;
+  background-image: linear-gradient(180deg, #00EFD1 0%, #00ACEA 100%);
+  border: 1.68px solid #00ACEA;
   border-radius: 11.76px;
   width: 102px;
   height: 25.2px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16.24px;
   font-weight: 700;
   letter-spacing: 0.9px;
@@ -67,19 +67,19 @@ button {
   flex-direction: column; }
 
 paper-dialog {
-  background-color: #FFFFFF;
+  background-color: color-white;
   border-radius: 23.76px;
   box-shadow: 0 21px 62px 0 rgba(0, 0, 0, 0.1);
   width: 80vh;
   height: 245px;
   max-width: none; }
   paper-dialog vaadin-button {
-    background-image: linear-gradient(44.3deg, #00BFEF 0%, #00DFD1 100%);
-    border: 1.68px solid #00BFEF;
+    background-image: linear-gradient(43.3deg, #00EFD1 0%, #00ACEA 100%);
+    border: 1.68px solid #00ACEA;
     border-radius: 11.76px;
     width: 102px;
     height: 25.2px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.9px;
@@ -110,8 +110,8 @@ paper-dialog {
         display: inline; }
       paper-dialog div ib-subaccount-edit div input, paper-dialog div ib-subaccount-edit div select, paper-dialog div ib-subaccount-register div input, paper-dialog div ib-subaccount-register div select {
         display: inline;
-        background-color: #EFEFEF;
-        border: 0.65px solid #EEEEEE;
+        background-color: #DFDFDF;
+        border: 0.65px solid #DFDFDF;
         border-radius: 3px;
         height: 25px;
         width: 278px;
